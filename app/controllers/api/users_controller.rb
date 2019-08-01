@@ -31,3 +31,9 @@ def update
   render 'error.json.jb'
   end
 end
+
+def show 
+  the_id = params[:id]
+  @user = User.find_by(id: parmas[id:])
+  render 'show.json.jb'
+end
