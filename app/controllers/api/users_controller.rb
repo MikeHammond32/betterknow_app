@@ -37,3 +37,9 @@ def show
   @user = User.find_by(id: parmas[id:])
   render 'show.json.jb'
 end
+def destroy
+  user = User.find_by(:id)
+  user.destroy
+
+  render 'destroy.json.jb'
+end

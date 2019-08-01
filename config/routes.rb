@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     get '/users' => 'users#show'
     patch '/users/:id' => 'user#update'
     post '/users' => 'user#create'
-
+    delete 'users/:id' => 'users#destroy'
 end
