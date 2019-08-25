@@ -1,2 +1,13 @@
-@products.map do |product|
+@users.map do |user|
 
+  {
+    id: user.id,
+    first_name: user.first_name,
+    last_name: user.last_name,
+    bio: user.bio,
+    location: user.location,
+    phone_number: user.phone_number,
+    profession: user.pro
+    
+  }
+end

@@ -1,11 +1,10 @@
 class Api::UsersController < ApplicationController
-  def index
-    if params[:sort]
-    @products = Product.all.order(price: :asc)
+def index
+    @users = User.all
+    if current_user
+      @users =  current_user.users
     else
-    @products = Product.all
-    end
-  @products = @products.order(:id => :asc)
+    @users = []
     render 'index.json.jb'
   end
 end
@@ -14,6 +13,7 @@ def show
   the_id = params[:id]
   @product = Product.find_by(id: the_id)
   render 'show.json.jb'
+end
 
 def create
   @user = User.new(
@@ -51,7 +51,7 @@ end
 
 def show 
   the_id = params[:id]
-  @user = User.find_by(id: parmas[id:])
+  @user = User.find_by(id: the_id)
   render 'show.json.jb'
 end
 def destroy
