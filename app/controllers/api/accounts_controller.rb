@@ -1,5 +1,5 @@
 class Api::AccountsController < ApplicationController
-    def create
+  def create
     account = Account.new(
       name: params[:name],
       email: params[:email],

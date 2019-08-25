@@ -13,5 +13,6 @@ Rails.application.routes.draw do
     delete 'users/:id' => 'users#destroy'
     post '/accounts' => 'accounts#create'
     post 'sessions' => 'sessions#create'
-end
+    get '/clients/:id' => 'clients#show'
+  end
 end
