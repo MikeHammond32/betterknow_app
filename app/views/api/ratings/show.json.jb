@@ -1,0 +1,9 @@
+{
+  id: @rating.id,
+  workease: @rating.workease,
+  payment: @rating.payment,
+  comment: @rating.comment,
+  client_id: @rating.client_id,
+  user_id: @rating.user_id,
+  created_at: @rating.created_at
+}
