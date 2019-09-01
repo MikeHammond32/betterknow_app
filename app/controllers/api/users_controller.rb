@@ -23,12 +23,14 @@ def create
     phone_number: params[:phone_number],
     location: params[:location],
     bio: params[:bio],
-    profession: params[:profession]
+    profession: params[:profession],
+    password: params[:password],
+    email: params[:email]
     })
   if @user.save
-    render 'create.json.jb'
+    render 'show.json.jb'
   else
-    render 'error.json.jb'
+    render 'show.json.jb'
   end
 end
 
