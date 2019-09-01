@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
 def index
     @users = User.all
     if current_user
-      @users =  current_user.users
+      @users = current_user.user
     else
     @users = []
     render 'index.json.jb'
