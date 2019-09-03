@@ -1,6 +1,6 @@
 class Api::RatingsController < ApplicationController
   def index
-    @ratings = Ratings.all
+    @ratings = Rating.all
     render 'index.json.jb'
   end
   def show
@@ -15,9 +15,9 @@ class Api::RatingsController < ApplicationController
       workease: params[:workease],
       payment: params[:payment],
       client_id: params[:client_id],
-      user_id: params[:user_id]
+      user_id: current_user.id
       })
-    if @rating.save
+    if @rating.save!
       render 'create.json.jb'
     else
       render 'error.json.jb'
