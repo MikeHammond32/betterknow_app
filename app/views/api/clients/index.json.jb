@@ -1,7 +1,8 @@
-@client.map do |client|
-{
-  id: contact.id,
-  first_name: contact.first_name,
-  last_name: contact.last_name
-}
+@clients.map do |client|
+  {
+    id: client.id,
+    first_name: client.first_name,
+    last_name: client.last_name,
+    location: client.location
+  }
 end

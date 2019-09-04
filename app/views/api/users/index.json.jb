@@ -1,5 +1,4 @@
 @users.map do |user|
-
   {
     id: user.id,
     first_name: user.first_name,
@@ -7,7 +6,6 @@
     bio: user.bio,
     location: user.location,
     phone_number: user.phone_number,
-    profession: user.pro
-    
+    profession: user.profession
   }
 end

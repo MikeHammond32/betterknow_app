@@ -2,5 +2,6 @@
   id: @client.id,
   first_name: @client.first_name,
   last_name: @client.last_name,
-  location: @client.location
+  location: @client.location,
+  ratings: @client.ratings
 }
